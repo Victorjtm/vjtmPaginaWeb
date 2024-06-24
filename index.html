@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VERIFICAR WEB CREADA</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <script>
+      function irWeb() {
+        window.location.href = "pginaWeb.html";
+      }
+      window.onload = paginaCargada;
+      function paginaCargada() {
+        document.getElementById("irWeb").addEventListener("click", irWeb);
+      }
+    </script>
+  </head>
+  <body>
+    <header>TAREA:VERIFICAR WEB CREADA</header>
+    <main>
+      <h1>
+        Pregunta 1. Cree una página web separando el código html, css y
+        JavaScript en distintos archivos. El resultado debe ser algo similar a
+        la siguiente página web:
+      </h1>
+      <h2>
+        La página tiene un encabezado con un logo en la parte superior
+        izquierda. La parte central está formada por dos columnas, la izquierda
+        con el contenido de varios artículos y la parte derecha con un menú de
+        navegación con 4 enlaces. En la parte inferior se sitúa el pie de página
+        ocupando todo el ancho con una dirección.
+      </h2>
+    </main>
+    <footer>
+      <button id="irWeb">Ir a la web</button>
+    </footer>
+  </body>
+</html>

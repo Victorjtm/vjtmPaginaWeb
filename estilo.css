@@ -1,0 +1,103 @@
+.central {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border: solid black;
+  margin: 5px;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+}
+
+.logo {
+  width: 170px;
+  height: 170px;
+  margin: 5px;
+  background-color: white;
+}
+
+.restoLogo {
+  flex-grow: 1;
+  height: 170px;
+  background-color: #008000; /* Color verde oscuro */
+  margin: 5px 5px 5px 0; /* Ajustar margen derecho */
+}
+
+.cabecera {
+  display: flex;
+  width: 100%;
+}
+.encabezado {
+  width: 90%;
+  height: 64vh;
+  background-color: #eaebb3; /* Color verde oscuro */
+  margin: 5px;
+}
+.menu {
+  width: 10%;
+  height: auto;
+  background-color: #adebad; /* Color verde oscuro */
+  margin: 5px;
+}
+.articulos {
+  width: 100%;
+  height: auto;
+  background-color: #e2e60d;
+}
+.pie {
+  width: 100%;
+  height: auto;
+  background-color: #8e0ee4; /* Color verde oscuro */
+  margin: 5px;
+}
+h1,
+h2,
+h3,
+p {
+  margin-left: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse; /* Colapsa los bordes de las celdas */
+}
+
+td {
+  border: 1px solid black; /* Agrega un borde de 1 píxel sólido negro a cada celda */
+  padding: 10px; /* Agrega un espacio de relleno de 10 píxeles dentro de cada celda */
+}
+button {
+  display: flex;
+  background-color: #ccc;
+  border: 1px solid #999;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #999, 0 3px 0 #888, 0 4px 0 #777, 0 5px 0 #666,
+    0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 0 1px 0 #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin: auto;
+}
+
+button:hover {
+  background-color: #e9c80e; /* Rojo sangre muerta */
+  color: #1c045f;
+}
+
+button:active {
+  box-shadow: 0 1px 0 #999, 0 2px 0 #888, 0 3px 0 #777, 0 4px 0 #666,
+    0 5px 1px rgba(0, 0, 0, 0.1), 0 0 3px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(4px);
+}

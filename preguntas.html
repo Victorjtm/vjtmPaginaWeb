@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PREGUNTAS VERIFICAR WEB CREADA</title>
     <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="estiloAnimaion.css" />
+    <script src="script.js"></script>
+    <script>
+      setInterval(updateClock, 1000); // Actualiza el reloj cada segundo
+      function refrescar() {
+        window.location.reload();
+      }
+      // Llamar a la función cada 10 segundos
+      setInterval(refrescar, 10000);
+    </script>
     <script>
       function irWeb() {
         window.location.href = "pginaWeb.html";
@@ -12,6 +22,16 @@
       window.onload = paginaCargada;
       function paginaCargada() {
         document.getElementById("irWeb").addEventListener("click", irWeb);
+        document
+          .getElementById("modoFuncionamiento")
+          .addEventListener("click", Mostar);
+        function Mostar() {
+          alert(
+            "El modo de funcionamiento es: " +
+              document.documentMode +
+              window.navigator.userAgent
+          );
+        }
       }
     </script>
   </head>
@@ -51,10 +71,287 @@
             </li>
           </ul>
         </li>
+        <li>
+          <h2>
+            Utilizar alguna opción para verificar que eres el propietario del
+            sitio web que estás desarrollando. Explica cómo y por qué lo harías.
+          </h2>
+          <ul>
+            <li>
+              Si utilizas una plataforma de alojamiento de sitios web, visita
+              las páginas de ayuda de tu servicio para consultar instrucciones
+              personalizadas sobre cómo verificar tu sitio en Search Console. Si
+              no encuentras nada, continúa con estos pasos.
+            </li>
+            <li>
+              Consulta los requisitos para usar esta técnica de verificación.
+            </li>
+            <li>
+              Selecciona el método de la etiqueta HTML en la página de
+              verificación de la propiedad de tu propiedad.
+            </li>
+            <li>
+              Copia la etiqueta del asistente de verificación de Search Console
+              en la sección
+              <code>&lt;head&gt;</code>
+              del código HTML de la página principal sin inicio de sesión de tu
+              sitio (consulta la nota). Ejemplo:
+              <pre>
+        &lt;head&gt;
+          &lt;title&gt;Página principal de example.com&lt;/title&gt;
+          &lt;meta name="google-site-verification" content="......." /&gt;
+        &lt;/head&gt;
+      </pre
+              >
+              Esta etiqueta es exclusiva para ti; no puede usarse para
+              identificar a otra persona y está asociada a tu cuenta de Gmail.
+            </li>
+            <li>
+              Guarda la página. Para confirmar que la etiqueta está presente en
+              la página publicada, visita la página y busca la etiqueta en su
+              código fuente. Para encontrarla, pulsa Control + F y busca
+              "google-site-verification" en el código fuente de la página.
+            </li>
+            <li>
+              Para completar la verificación, haz clic en la opción Verificar de
+              la página de detalles de la verificación.
+            </li>
+            <li>
+              Si la verificación falla, consulta la sección Solucionar problemas
+              que hay a continuación para resolver el problema.
+            </li>
+            <li>
+              <a href="#modalmask">Ventajas</a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="#modalmask1">Ver resultado de la verificación</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2>
+            Muestra con JavaScript, mediante un “alert” en qué modo de
+            funcionamiento se está ejecutando la página web. Realice una captura
+            de pantalla y diga en en qué modo está trabajando.
+          </h2>
+          <button id="modoFuncionamiento">
+            Pulsa para saber el modo de funcionamiento
+          </button>
+        </li>
+        <li>
+          <h2>
+            Usando alguna herramienta de depuración, mostrar la hora actual en
+            la consola del navegador, mostrando horas, minutos y segundos.
+          </h2>
+          <h3 id="hora"></h3>
+        </li>
+        <li>
+          <h2>
+            Mostrar la hora actual en la página web y refrescar la página
+            automáticamente cada 10 segundos.
+          </h2>
+        </li>
+        <li>
+          <h2>
+            Explicar las distintas formas de validar el archivo html, y validar
+            el documento html para que cumpla los estándares de html5.
+          </h2>
+          <ol>
+            <li>
+              <h2>Validación manual</h2>
+              <p>
+                Revisa que el código cumpla con las reglas básicas de HTML5,
+                como etiquetas bien cerradas, anidamiento correcto, atributos
+                entre comillas, estructura básica, etc.
+              </p>
+            </li>
+
+            <li>
+              <h2>Validadores online</h2>
+              <ul>
+                <li>Validador HTML del W3C</li>
+                <li>Nu Html Checker</li>
+                <li>HTML Tidy</li>
+              </ul>
+            </li>
+
+            <li>
+              <h2>Extensiones de navegador</h2>
+              <ul>
+                <li>HTML Validator (Chrome y Firefox)</li>
+                <li>Web Developer (Chrome y Firefox)</li>
+              </ul>
+            </li>
+
+            <li>
+              <h2>Herramientas de desarrollo del navegador</h2>
+              <ul>
+                <li>Pestaña "Elements" en Chrome y Edge</li>
+                <li>Pestaña "Inspector" en Firefox</li>
+              </ul>
+            </li>
+
+            <li>
+              <h2>Preprocesadores HTML</h2>
+              <ul>
+                <li>Pug (antes Jade)</li>
+                <li>Haml</li>
+              </ul>
+            </li>
+          </ol>
+          <a href="#modalmask2">Como validar W3C paso a paso</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#modalmask3">Imagen resultado de la validación</a>
+        </li>
       </ol>
     </main>
     <footer>
       <button id="irWeb">Ir a la web</button>
     </footer>
+    <div id="modalmask1" class="modalmask">
+      <div class="modalbox movedown">
+        <a href="#close" class="close">X</a>
+        <img
+          src="Captura etiqueta verificacion.png"
+          alt="Etiqueta de verificación"
+        />
+      </div>
+    </div>
+    <div id="modalmask3" class="modalmask">
+      <div class="modalbox rotate">
+        <a href="#close" class="close">X</a>
+        <img src="Captura validación.jpg" alt="imagen de validación" />
+      </div>
+    </div>
+    <div id="modalmask" class="modalmask">
+      <div class="modalbox movedown">
+        <a href="#close" class="close">X</a>
+        <h2>Ventajas de la verificación con etiqueta</h2>
+        <ul id="ventanaModal">
+          <li>
+            <strong>Simplicidad:</strong>
+            <p>
+              La etiqueta HTML es fácil de generar y añadir a tu sitio web. Solo
+              necesitas copiar y pegar una línea de código en la sección
+              <code>&lt;head&gt;</code>
+              de tu página principal.
+            </p>
+          </li>
+          <li>
+            <strong>No requiere cambios en DNS:</strong>
+            <p>
+              A diferencia de otros métodos como la verificación con un registro
+              DNS, no necesitas acceder o modificar la configuración DNS de tu
+              dominio, lo cual puede ser complicado y lento debido a la
+              propagación de cambios DNS.
+            </p>
+          </li>
+          <li>
+            <strong>Inmediatez:</strong>
+            <p>
+              Los cambios en el HTML se reflejan de inmediato una vez que se
+              suben al servidor, lo que permite una verificación rápida sin
+              esperas prolongadas.
+            </p>
+          </li>
+          <li>
+            <strong>Compatibilidad:</strong>
+            <p>
+              Este método es compatible con la mayoría de los servicios de
+              alojamiento y plataformas de creación de sitios web, ya que la
+              mayoría permite editar el código HTML directamente o a través de
+              sus interfaces.
+            </p>
+          </li>
+          <li>
+            <strong>Flexibilidad:</strong>
+            <p>
+              Puedes mantener el control total sobre la etiqueta. Si en algún
+              momento deseas revocar el acceso o hacer cambios, simplemente
+              puedes eliminar o modificar la etiqueta en tu HTML.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="modalmask2" class="modalmask">
+      <div class="modalbox movedown">
+        <a href="#close" class="close">X</a>
+        <h2>Validación con W3C paso a paso</h2>
+
+        <ol>
+          <li>
+            <p>
+              Accede al validador de HTML del W3C en la siguiente dirección:
+              <a href="https://validator.w3.org/" target="_blank">
+                https://validator.w3.org/
+              </a>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Selecciona la opción "Validar por URL" si quieres validar una
+              página web en línea, o "Validar por archivo" si quieres validar un
+              archivo HTML local.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Si seleccionaste "Validar por URL", ingresa la URL de la página
+              web que deseas validar. Si seleccionaste "Validar por archivo",
+              haz clic en "Elegir archivo" y selecciona el archivo HTML que
+              quieres validar.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Haz clic en el botón "Validar" para iniciar el proceso de
+              validación.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              El validador del W3C analizará el código HTML y mostrará los
+              resultados de la validación. Estos resultados pueden incluir:
+            </p>
+            <ul>
+              <li>
+                Errores: Problemas que deben ser corregidos para que el código
+                cumpla con los estándares HTML.
+              </li>
+              <li>
+                Advertencias: Problemas que no son necesariamente errores, pero
+                que pueden indicar problemas potenciales.
+              </li>
+              <li>Información: Detalles adicionales sobre el código HTML.</li>
+            </ul>
+          </li>
+
+          <li>
+            <p>
+              Revisa cuidadosamente los resultados de la validación y corrige
+              cualquier error o advertencia que se haya encontrado.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Si has realizado cambios en el código HTML, vuelve a validar la
+              página web o el archivo para asegurarte de que ya no haya errores.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Repite los pasos 3-7 hasta que el validador del W3C no reporte
+              ningún error y solo muestre advertencias o información.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </div>
   </body>
 </html>
